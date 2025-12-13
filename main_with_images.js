@@ -4,21 +4,21 @@ const slides = [
         tag: "Now Playing",
         meta: "In theaters now",
         desc: "A moving reimagining of Shakespeare’s family.",
-        img: "images/hamnet.png"
+        img: "../images/hamnet.png"
     },
     {
         title: "Song Sung Blue",
         tag: "Coming Soon",
         meta: "December release",
         desc: "A musical journey of love and loss.",
-        img: "images/song_sung_blue.png"
+        img: "../images/song_sung_blue.png"
     },
     {
         title: "Bugonia",
         tag: "Now Streaming",
         meta: "Watch at home",
         desc: "A dark and thrilling satire.",
-        img: "images/bugonia.png"
+        img: "../images/bugonia.png"
     }
 ];
 
