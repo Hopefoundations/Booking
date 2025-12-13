@@ -105,6 +105,13 @@ nav a:hover {
     margin-bottom: 4rem;
 }
 
+.hero-poster-inner {
+    /* keep poster containers a consistent shape so posters match visually */
+    min-height: 320px;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+
 .hero-poster-inner img {
     width: 100%;
     height: 100%;
