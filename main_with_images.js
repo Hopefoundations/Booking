@@ -28,15 +28,14 @@ const films = slides;
 document.addEventListener("DOMContentLoaded", () => {
     revealSections();
 
-    const page = document.body.dataset.page;
-
-    if (page === "home") {
+    if (document.body.dataset.page === "home") {
         setupHero();
         renderNews();
         renderFilms();
     }
-    if (page === "news") renderNews();
-    if (page === "films") renderFilms();
+
+    if (document.body.dataset.page === "news") renderNews();
+    if (document.body.dataset.page === "films") renderFilms();
 });
 
 function setupHero() {
@@ -58,7 +57,7 @@ function setupHero() {
             meta.textContent = slides[index].meta;
             desc.textContent = slides[index].desc;
             poster.style.opacity = 1;
-        }, 200);
+        }, 250);
     }, 5000);
 }
 
@@ -101,9 +100,11 @@ function renderFilms() {
 function revealSections() {
     const sections = document.querySelectorAll("[data-section]");
     const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) e.target.classList.add("in-view");
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+            }
         });
     });
-    sections.forEach(s => observer.observe(s));
+    sections.forEach(section => observer.observe(section));
 }
