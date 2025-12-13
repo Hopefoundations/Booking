@@ -1,105 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Focus Features – Home (Demo)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Focus Style – Home</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body data-page="home">
-  <header>
+
+<header>
     <div class="nav-wrap">
-      <div class="logo">FOCUS FEATURES</div>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="news.html">News</a>
-        <a href="films.html">Films</a>
-        <a href="#footer">More</a>
-      </nav>
-      <div class="nav-right">
-        <span>Log In</span>
-        <button class="btn-outline">Join Insider</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="page">
-    <!-- HERO -->
-    <section class="hero" id="hero" data-section>
-      <div class="hero-poster">
-        <div class="hero-poster-inner">
-          <img src="images/hamnet.png" id="heroPosterImg" alt="Hamnet poster" style="width:100%;height:100%;object-fit:cover;">
+        <div class="logo">FOCUS</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="films.html">Films</a>
+            <a href="news.html">News</a>
+        </nav>
+        <div class="nav-right">
+            <button class="btn-outline">Login</button>
         </div>
-      </div>
-      <div class="hero-info">
+    </div>
+</header>
+
+<main class="page">
+
+<section class="hero" data-section>
+    <div class="hero-poster-inner">
+        <img id="heroPosterImg" src="images/hamnet.png" alt="">
+    </div>
+
+    <div class="hero-info">
         <div>
-          <div class="hero-tag" id="heroTag">Now Playing</div>
-          <h1 class="hero-title" id="heroTitle">Hamnet</h1>
-          <div class="hero-meta" id="heroMeta">Now playing in select theaters</div>
-          <p class="hero-desc" id="heroDesc">
-            Follow the moving reimagining of the story behind Shakespeare's most
-            famous play — a tale of love, loss, and the power of art.
-          </p>
+            <div id="heroTag" class="hero-tag">Now Playing</div>
+            <h1 id="heroTitle" class="hero-title">Hamnet</h1>
+            <p id="heroMeta" class="hero-meta">In theaters now</p>
+            <p id="heroDesc" class="hero-desc">
+                A deeply moving reimagining of Shakespeare’s family.
+            </p>
         </div>
 
-        <div style="display:flex;flex-direction:column;gap:0.9rem;">
-          <div class="hero-actions">
-            <button class="btn-primary" id="heroPrimaryBtn">Get Tickets</button>
-            <button class="btn-ghost">Watch Trailer</button>
-          </div>
-
-          <div class="hero-dots">
-            <span id="heroLabel">1 / 3</span>
-            <div style="display:flex;gap:0.45rem;margin-left:0.7rem;">
-              <div class="dot active" data-index="0"></div>
-              <div class="dot" data-index="1"></div>
-              <div class="dot" data-index="2"></div>
-            </div>
-          </div>
+        <div class="hero-actions">
+            <button class="btn-primary">Get Tickets</button>
         </div>
-      </div>
-    </section>
-
-    <!-- NEWS -->
-    <section class="section" id="news" data-section>
-      <div class="section-header">
-        <h2 class="section-title">Latest News</h2>
-        <a href="news.html" class="section-link">More Focus News</a>
-      </div>
-      <div class="news-grid" id="newsGrid"></div>
-    </section>
-
-    <!-- RELEASES -->
-    <section class="section" id="releases" data-section>
-      <div class="section-header">
-        <h2 class="section-title">New & Upcoming Film Releases</h2>
-        <a href="films.html" class="section-link">More Focus Films</a>
-      </div>
-      <div class="film-row" id="filmRow"></div>
-    </section>
-  </main>
-
-  <footer id="footer" data-section>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Ad Choices</a>
-      </div>
-      <div class="footer-social">
-        <span class="pill-link">Facebook</span>
-        <span class="pill-link">Instagram</span>
-        <span class="pill-link">X</span>
-        <span class="pill-link">YouTube</span>
-      </div>
-      <div style="flex-basis:100%;margin-top:0.4rem;">
-        © 2025 Focus Features – Demo with posters
-      </div>
     </div>
-  </footer>
+</section>
 
-  <script src="main_with_images.js"></script>
+<section data-section>
+    <h2 class="section-title">Latest News</h2>
+    <div id="newsGrid" class="news-grid"></div>
+</section>
+
+<section data-section>
+    <h2 class="section-title">Films</h2>
+    <div id="filmRow" class="film-row"></div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>© Focus Features</div>
+        <div>Privacy · Terms</div>
+    </div>
+</footer>
+
+<script src="main_with_images.js"></script>
 </body>
 </html>
